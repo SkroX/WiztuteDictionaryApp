@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textOutput = findViewById(R.id.textOutput);
-        textOutput.setText("Speak to enter text!");
+        textOutput.setText("Tap and speak to enter text!");
         if (savedInstanceState != null)
             makeTagLinks(savedInstanceState.getString("speech"), textOutput);
         // ImageView imageView = findViewById(R.id.imageView);
