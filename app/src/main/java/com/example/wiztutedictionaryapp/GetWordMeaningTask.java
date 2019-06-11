@@ -28,7 +28,7 @@ public class GetWordMeaningTask extends AsyncTask<String, Void, String> {
             BufferedReader reader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
             StringBuilder stringBuilder = new StringBuilder();
 
-            String line ;
+            String line;
             while ((line = reader.readLine()) != null) {
                 stringBuilder.append(line + "\n");
             }

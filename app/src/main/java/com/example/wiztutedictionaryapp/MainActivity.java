@@ -9,7 +9,6 @@ import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -26,11 +25,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textOutput = findViewById(R.id.textOutput);
+        textOutput.setText("Speak to enter text!");
         if (savedInstanceState != null)
             makeTagLinks(savedInstanceState.getString("speech"), textOutput);
-       // ImageView imageView = findViewById(R.id.imageView);
+        // ImageView imageView = findViewById(R.id.imageView);
         //imageView.setImageResource(R.drawable.background);
-        textOutput.setText("Tap to enter text");
+
 
 
     }

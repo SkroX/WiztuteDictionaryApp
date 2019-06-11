@@ -1,15 +1,7 @@
 package com.example.wiztutedictionaryapp;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.Rect;
-import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.LoaderManager;
-import android.support.v4.content.Loader;
-import android.text.Selection;
-import android.text.SpannableString;
 import android.text.style.ClickableSpan;
 import android.util.Log;
 import android.view.Gravity;
@@ -24,7 +16,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class MyClickableSpan extends ClickableSpan  {
+public class MyClickableSpan extends ClickableSpan {
 
 
     private final String mText;
@@ -42,9 +34,6 @@ public class MyClickableSpan extends ClickableSpan  {
         try {
             String result = new GetWordMeaningTask().execute(dictionaryEntries()).get();
             String def = getDefinition(result);
-            //  if(def.equals("")){ def="no relevant meaning found";}
-
-
             showPopUp(widget, def);
 
         } catch (Exception e) {
